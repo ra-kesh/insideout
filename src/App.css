@@ -1,16 +1,85 @@
-.App {
+/* .App {
   text-align: center;
+
+} */
+
+
+@media screen and (min-width:900px){
+  .container-main{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }  
 }
+
+.container-form{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.div-form{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.input-form{
+  width: 60%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid;
+  font-size: larger;
+}
+
+.div-form input:focus::placeholder{
+  background-color: transparent;
+}
+
+
+.form-title{
+  max-height: 20vh;
+  text-align: right;
+  font-size: 7vh;
+  padding: 0 5rem;
+
+}
+
+.emoji-title{
+  color: azure;
+  font-size: 7vh;
+  padding:0 5rem;
+}
+
+h1,ul{
+  margin: 0;
+  padding: 0;
+}
+
+
+.container-emoji{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: black;
+}
+
+
+
 
 li{
   list-style: none;
   display: inline-block;
   cursor: pointer;
-  margin: 1rem;
+  margin: 1rem 1rem 0 0;
   font-size: 1.5rem;
-
- 
 }
+
+
 
 
 
