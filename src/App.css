@@ -2,6 +2,52 @@
   text-align: center;
 }
 
+li{
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+  font-size: 1.5rem;
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +81,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
