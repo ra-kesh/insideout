@@ -37,32 +37,35 @@ function App() {
           <div className="container-form">
             <div className="div-form">
                 <input
-                  className="input-form"
+                  className="input-form "
                   placeholder= "Enter your emoji here "
                   onChange={inputMeanningHandeller}            
                 />
-                 <h2> {emojiMeanning}</h2>
-            </div>
+                <div>
+                  <h2> {emojiMeanning}</h2>
+                </div>
+             </div>   
             <div className="form-title">
               <h1>inside</h1>
             </div>
           </div>
           <div className="container-emoji">
           <div className="emoji-title">
-                <h1>out.</h1>
-                <div>
-                <ul>
-              
-              {
-                emojiDbArray.map((emoji,index)=>{
-                  return <li
-                          onClick={()=>emojiMeanningHandeller(emoji)} 
-                          key={index}>
-                          {emoji}</li> //displaying all the keys from the array
-                })
-              }
-           
-         </ul> 
+              <div  className="div-title">
+                   <h1>out.</h1>
+              </div>           
+              <div>
+                  <ul>              
+                      {
+                        emojiDbArray.map((emoji,index)=>{
+                          return <li
+                                  onClick={()=>emojiMeanningHandeller(emoji)} 
+                                  key={index}>
+                                  {emoji}
+                                  </li> //displaying all the keys from the array
+                        })
+                      }        
+                  </ul> 
                 </div>
             </div>
             <div className="div-form">
@@ -71,44 +74,6 @@ function App() {
           
           </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {/* <div>
-          <h1>inside out</h1>
-          <input onChange={inputMeanningHandeller}/>
-          <h2>{emojiMeanning}</h2>
-           <ul>
-              
-                {
-                  emojiDbArray.map((emoji,index)=>{
-                    return <li
-                            onClick={()=>emojiMeanningHandeller(emoji)} 
-                            key={index}>
-                            {emoji}</li> //displaying all the keys from the array
-                  })
-                }
-             
-           </ul> 
-        </div> */}
 
      
 

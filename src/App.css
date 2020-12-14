@@ -4,19 +4,29 @@
 } */
 
 
-@media screen and (min-width:900px){
+@media screen and (min-width:1050px){
   .container-main{
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    max-height: 100vh;
   }  
+  .emoji-title, 
+  .form-title {
+    padding: 0 5rem 1.5rem;
+  }
+
 }
 
+.container-main{
+  max-height: 100vh;
+}
+  
 .container-form{
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .div-form{
@@ -34,6 +44,7 @@
   outline: none;
   border-bottom: 2px solid;
   font-size: larger;
+  margin-bottom: 2rem;
 }
 
 .div-form input:focus::placeholder{
@@ -42,17 +53,15 @@
 
 
 .form-title{
-  max-height: 20vh;
+  /* max-height: 20vh; */
   text-align: right;
   font-size: 7vh;
-  padding: 0 5rem;
-
+  
 }
 
 .emoji-title{
   color: azure;
   font-size: 7vh;
-  padding:0 5rem;
 }
 
 h1,ul{
@@ -77,8 +86,23 @@ li{
   cursor: pointer;
   margin: 1rem 1rem 0 0;
   font-size: 1.5rem;
+
 }
 
+li:active , li:hover{
+  border-radius: 3px;
+  background-color:#1f1f1f;
+  padding: .3rem;
+  
+}
+
+
+/* .div-title{
+  position: fixed;
+  display: flex;
+  
+}
+ */
 
 
 
