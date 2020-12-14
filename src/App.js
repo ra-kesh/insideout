@@ -52,7 +52,7 @@ function App() {
           <div className="container-emoji">
           <div className="emoji-title">
               <div  className="div-title">
-                   <h1>out.</h1>
+                   <h1>outt.</h1>
               </div>           
               <div>
                   <ul>              
