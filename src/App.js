@@ -11,21 +11,22 @@ function App() {
 
   let emojiDbArray = Object.keys(emojiDB); 
 
-  const [emojiMeanning, setEmojiMeanning] = useState("");
+  const [emojiMeanning, setEmojiMeanning] = useState("Emoji interpreter"); // state before interact
 
-  function emojiMeanningHandeller(emoji){
-    setEmojiMeanning(emojiDB[emoji]);
+  function emojiMeanningHandeller(emoji){ //what happens after interact
+
+    setEmojiMeanning(emojiDB[emoji]); // state after interact
   }
 
-  function inputMeanningHandeller(event){
+  function inputMeanningHandeller(event){ // what happens after  interact
     let inputEmoji = event.target.value;
     
     if (emojiDbArray.includes(inputEmoji)){
-      setEmojiMeanning(emojiDB[inputEmoji]);
-    }else if (inputEmoji === " "){
+      setEmojiMeanning(emojiDB[inputEmoji]); // state after interact
+    }else if (inputEmoji === ""){
       setEmojiMeanning("Emoji Interpreter")
     }else {
-      setEmojiMeanning("Sorry we can't help you")
+      setEmojiMeanning("sorry 😔 can't interpret this")
     }
     
   }
@@ -39,7 +40,7 @@ function App() {
                 <input
                   className="input-form "
                   placeholder= "Enter your emoji here "
-                  onChange={inputMeanningHandeller}            
+                  onChange={inputMeanningHandeller}     //interact       
                 />
                 <div>
                   <h2> {emojiMeanning}</h2>
@@ -59,10 +60,10 @@ function App() {
                       {
                         emojiDbArray.map((emoji,index)=>{
                           return <li
-                                  onClick={()=>emojiMeanningHandeller(emoji)} 
+                                  onClick={()=>emojiMeanningHandeller(emoji)} //interact
                                   key={index}>
                                   {emoji}
-                                  </li> //displaying all the keys from the array
+                                  </li> //view
                         })
                       }        
                   </ul> 
