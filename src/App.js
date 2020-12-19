@@ -11,10 +11,12 @@ function App() {
 
   let emojiDbArray = Object.keys(emojiDB); 
 
-  const [emojiMeanning, setEmojiMeanning] = useState("Emoji interpreter"); // state before interact
+  const [emojiMeanning, setEmojiMeanning] = useState("Emoji interpreter"); // state before interact 
+  const [emojiDesc, setEmojiDesc] = useState("");
 
   function emojiMeanningHandeller(emoji){ //what happens after interact
 
+    setEmojiDesc(`Description about ${emoji} will be shown here in v2`);
     setEmojiMeanning(emojiDB[emoji]); // state after interact
   }
 
@@ -22,9 +24,13 @@ function App() {
     let inputEmoji = event.target.value;
     
     if (emojiDbArray.includes(inputEmoji)){
+      
+      setEmojiDesc(`Description about ${inputEmoji} will be shown here in v2`);
       setEmojiMeanning(emojiDB[inputEmoji]); // state after interact
+
     }else if (inputEmoji === ""){
       setEmojiMeanning("Emoji Interpreter")
+      setEmojiDesc("");
     }else {
       setEmojiMeanning("sorry 😔 can't interpret this")
     }
@@ -44,6 +50,9 @@ function App() {
                 />
                 <div>
                   <h2> {emojiMeanning}</h2>
+                </div>
+                <div>
+                  <h3> {emojiDesc}</h3>
                 </div>
              </div>   
             <div className="form-title">
