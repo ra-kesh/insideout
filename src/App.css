@@ -12,10 +12,7 @@
   }
   .div-form{
     height: 80vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    
   
   }
 
@@ -25,7 +22,7 @@
     height: 55vh;
   }
   .emoji-title ul{
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
   h3{
     margin: 0 2rem;
